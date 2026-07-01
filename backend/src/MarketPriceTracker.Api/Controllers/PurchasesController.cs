@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace MarketPriceTracker.Api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class PurchasesController(IPurchaseService purchaseService) : ControllerBase
 {
     [HttpGet]

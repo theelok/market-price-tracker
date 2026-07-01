@@ -6,7 +6,7 @@ namespace MarketPriceTracker.Api.Controllers;
 /// Lightweight health endpoint for uptime checks and local development verification.
 /// </summary>
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class HealthController : ControllerBase
 {
     [HttpGet]
