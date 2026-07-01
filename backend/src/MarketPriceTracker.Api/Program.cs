@@ -32,16 +32,17 @@ var allowedOrigins = builder.Configuration
     .GetSection("Cors:AllowedOrigins")
     .Get<string[]>() ?? ["http://localhost:5173"];
 
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("Frontend", policy =>
+    options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins(allowedOrigins)
+        policy
+            .WithOrigins("https://market-price-frontend.onrender.com")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
 });
-
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
