@@ -60,7 +60,15 @@ app.UseSwaggerUI(options =>
 });
 
 app.UseHttpsRedirection();
+
+// ✅ ADD THIS (IMPORTANT)
+app.UseRouting();
+
+// ✅ CORS must be AFTER routing, BEFORE auth + controllers
 app.UseCors("AllowFrontend");
+
+app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();
