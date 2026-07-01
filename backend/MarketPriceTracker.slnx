@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MarketPriceTracker.Api/MarketPriceTracker.Api.csproj" />
+    <Project Path="src/MarketPriceTracker.Application/MarketPriceTracker.Application.csproj" />
+    <Project Path="src/MarketPriceTracker.Domain/MarketPriceTracker.Domain.csproj" />
+    <Project Path="src/MarketPriceTracker.Infrastructure/MarketPriceTracker.Infrastructure.csproj" />
+  </Folder>
+</Solution>
