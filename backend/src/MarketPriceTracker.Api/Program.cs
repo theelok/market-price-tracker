@@ -60,7 +60,7 @@ app.UseSwaggerUI(options =>
 });
 
 app.UseHttpsRedirection();
-app.UseCors("Frontend");
+app.UseCors("AllowFrontend");
 app.MapControllers();
 
 app.Run();
